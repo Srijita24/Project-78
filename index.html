@@ -1,0 +1,45 @@
+<html >
+
+    <body style = "background-color: lightskyblue; text-align: center">
+        
+        <h1 style="color: mediumblue; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">My Family Book</h1>
+        
+        <br>
+        
+        <img src = "Capture.PNG" style="height: 300px; width: 300;" id = "family-member-img">
+
+        <br>
+
+        <br>
+        
+        <button id = "next_button" onclick="update()">Next</button>
+        
+        <p id = "family-member-name">Family Book</p>
+
+        <script>
+
+            var images = 
+            ["Capture.PNG" , "ME.PNG", "MOTHER.PNG" , "SISTER.PNG" , "GRANDMOTHER.PNG" , "FATHER.PNG"];
+
+            var names = 
+            ["Family Book" , "Srijita Sau" , "Shiuli Chakraborty Sau" , "Shruti Sau" , "Arati Sau" , "Shyamapada Sau"];
+
+            var i = 0;
+            function update()  
+            {
+                i++;
+                var numbers_of_family_member_in_array = 5
+                if (i > numbers_of_family_member_in_array) {
+                    i = 0;
+                }
+                var updatedImage = images[i];
+                var updatedName = names[i];
+
+                document.getElementById("family-member-img").src = updatedImage;
+                document.getElementById("family-member-name").innerHTML = updatedName;
+            }
+        </script>
+
+    </body>
+
+</html>
